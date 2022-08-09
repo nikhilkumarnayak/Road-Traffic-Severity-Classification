@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
 from prediction import get_prediction, ordinal_encoder, label_encoder
 
 with open('Models/model_XGB.pkl', 'rb') as f:
@@ -86,7 +87,7 @@ features = ['day_of_week', 'driver_age', 'driver_sex', 'educational_level',
 # ['hour','day_of_week','casualties','accident_cause','vehicles_involved','vehicle_type','driver_age','accident_area','driving_experience','lanes']
 
 
-st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App 🚧</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App 🚗🚧🚗</h1>", unsafe_allow_html=True)
 def main():
     with st.form('prediction_form'):
 
